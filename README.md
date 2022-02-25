@@ -1,5 +1,8 @@
 # flask-ansible
 
+#### Django实现的Ansible的新项目: django-ansible
+用Flask实现起来管理比较不方便，使用Django改善了下项目，链接地址：[https://gitee.com/shijiange/django-ansible](https://gitee.com/shijiange/django-ansible)
+
 #### 介绍
 Flask实现Ansible和Ansible-Playbook的配置+部署系统，同时带有简单的服务器管理系统和认证系统。本项目需要把Python3安装到/usr/local/python目录下，ansible和ansible-playbook也是安装在此目录下。
 
@@ -51,6 +54,3 @@ insert into user (username,password) values ('xxx', md5('xxxx'));
 
 #### 如何实现的在线教程地址
   https://edu.51cto.com/sd/cb410
-
-#### Django实现的Ansible的新项目: django-ansible
-用Flask实现起来管理比较不方便，使用Django改善了下项目，链接地址：[https://gitee.com/shijiange/django-ansible](https://gitee.com/shijiange/django-ansible)
