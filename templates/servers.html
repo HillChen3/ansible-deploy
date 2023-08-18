@@ -28,6 +28,7 @@
                 url: '/servers/get_by_page',
                 type: 'post',
                 cache: false,
+                async: false,
                 data: JSON.stringify(info),
                 success: function (data) {
                     alldata = JSON.parse(data);
