@@ -44,12 +44,12 @@ def deploy_by_id():
     result = tool_db.selectByParameters(sql, params=(id,))[0]
     tmpnumber = int(time.time() * 1000)
     # name, hosts_path, playbook_path, forks
-    displaycommand = """ /usr/local/python/bin/ansible-playbook  -i {0} {1} -f {2} """.format(
+    displaycommand = """ ansible-playbook  -i {0} {1} -f {2} """.format(
         result['hosts_path'],
         result['playbook_path'],
         result['forks']
     )
-    command = """ /usr/local/python/bin/ansible-playbook  -i {0} {1} -f {2} >static/logs/{3} 2>&1; printf '\n\t\t\t' >>static/logs/{4} """.format(
+    command = """ ansible-playbook  -i {0} {1} -f {2} >static/logs/{3} 2>&1; printf '\n\t\t\t' >>static/logs/{4} """.format(
         result['hosts_path'],
         result['playbook_path'],
         result['forks'], tmpnumber, tmpnumber

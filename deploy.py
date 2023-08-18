@@ -55,14 +55,14 @@ def deploy_by_id():
     result = tool_db.selectByParameters(sql, params=(id,))[0]
     tmpnumber = int(time.time() * 1000)
     # name, hosts_path, hosts_pattern, module, args, forks
-    runcommand = """ /usr/local/python/bin/ansible -i {0} {1} -m {2} -a '{3}' -f {4} """.format(
+    runcommand = """ ansible -i {0} {1} -m {2} -a '{3}' -f {4} """.format(
         result['hosts_path'],
         result['hosts_pattern'],
         result['module'],
         result['args'],
         result['forks']
     )
-    command = """ /usr/local/python/bin/ansible -i {0} {1} -m {2} -a '{3}' -f {4} >static/logs/{5} 2>&1; printf '\n\t\t\t' >>static/logs/{6} """.format(
+    command = """ ansible -i {0} {1} -m {2} -a '{3}' -f {4} >static/logs/{5} 2>&1; printf '\n\t\t\t' >>static/logs/{6} """.format(
         result['hosts_path'],
         result['hosts_pattern'],
         result['module'],
