@@ -27,6 +27,7 @@
         }
 
         function deploy(id) {
+            $("#pre_deploy_result").html('');
             $('#isnotdeploy').html("部署中，请耐心等待");
             $.ajax({
                 url: '/playbook/deploy_by_id',

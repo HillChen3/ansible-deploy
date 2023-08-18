@@ -54,3 +54,14 @@ insert into user (username,password) values ('xxx', md5('xxx'));
 
 #### 如何实现的在线教程地址
   https://edu.51cto.com/sd/cb410
+
+**Playbook测试demo**
+```
+---
+- hosts: all
+  tasks:
+  - name: test
+    shell: ifconfig
+    register: result
+  - debug: var=result
+```
