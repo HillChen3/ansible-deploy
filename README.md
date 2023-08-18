@@ -33,14 +33,15 @@ Flask-Ansible.sql里面有个用户名密码需要修改，认证使用
 4. 运行Flask项目
 ```  
   python3 app.py
+  #监听所有网卡app.run(host='0.0.0.0')
 ```
 
 #### 使用说明
 
-1. 认证系统：登录界面没优化，比较丑。默认用户名密码shijiange/shijiangepwd，可自行到user表添加或删除用户
+1. 认证系统：登录界面没优化，比较丑。默认用户名密码Flask-Ansible.sql里，可自行到user表添加或删除用户
 ![需要登录](https://images.gitee.com/uploads/images/2019/0710/111040_c8e2f6e3_129867.png "认证.png")
 ```
-insert into user (username,password) values ('xxx', md5('xxxx'));
+insert into user (username,password) values ('xxx', md5('xxx'));
 ```
 2. 服务器管理系统：支持Excel导入
 ![服务器管理系统](https://images.gitee.com/uploads/images/2019/0710/111256_364aa699_129867.png "服务器管理.png")
