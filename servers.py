@@ -80,4 +80,6 @@ def get_by_page():
     sql = 'select * from servers where name like %s or ip like %s limit %s,%s'
     params = ( search, search, (pagenow-1)*pagesize, pagesize )
     result = tool_db.selectByParameters( sql, params=params )
-    return json.dumps( result )
+    countsql = 'select count(1) as allcount from servers where name like %s or ip like %s'
+    allcount = tool_db.selectByParameters(countsql, params=(search,))[0]['allcount']
+    return json.dumps( {"result": result, "allcount": allcount} )
