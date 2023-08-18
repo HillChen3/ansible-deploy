@@ -16,7 +16,7 @@ CREATE TABLE `user` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-insert into user (username,password) values ('shijiange', md5('shijiangepwd'));
+insert into user (username,password) values ('xxx', md5('xxx'));
 
 
 CREATE TABLE `deploy` (
