@@ -85,9 +85,12 @@
                 url: '/playbook/get_by_page',
                 type: 'post',
                 cache: false,
+                async: false,
                 data: JSON.stringify(info),
                 success: function (data) {
-                    allresult = JSON.parse(data);
+                    alldata = JSON.parse(data);
+                    allresult = alldata['result'];
+                    allpage = Math.ceil(alldata['allcount']/pagesize);
                     $("#tbodycontent").html("");
                     //name, hosts_path, playbook_path, forks
                     for (i = 0; i < allresult.length; i++) {
@@ -106,11 +109,13 @@
                     }
                 }
             });
-            pagedown = '<button type="button" onclick="get_page(' + (pagenow - 1) + ',' + pagesize + ', \'' + search + '\')" class="btn btn-sm">上一页</button>'
-            pageup = '<button type="button" onclick="get_page(' + (pagenow + 1) + ',' + pagesize + ', \'' + search + '\')" class="btn btn-sm">下一页</button>'
+            pagedown = '<button id="pagedown" type="button" onclick="get_page(' + (pagenow - 1) + ',' + pagesize + ', \'' + search + '\')" class="btn btn-sm">上一页</button>'
+            pageup = '<button id="pageup" type="button" onclick="get_page(' + (pagenow + 1) + ',' + pagesize + ', \'' + search + '\')" class="btn btn-sm">下一页</button>'
             $("#pageinfo").html("当前页：<p style='display: inline;' id='pagenow'>" + pagenow + "</p>");
             $("#pageinfo").append(" " + pagedown);
             $("#pageinfo").append(" " + pageup);
+            if(pagenow == 1){ $('#pagedown').addClass('disabled');$('#pagedown').removeAttr("onclick"); }
+            if(pagenow == allpage){ $('#pageup').addClass('disabled');$('#pageup').removeAttr("onclick"); }
         }
 
         $(document).ready(function () {

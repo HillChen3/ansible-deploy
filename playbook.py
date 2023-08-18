@@ -21,7 +21,9 @@ def get_by_page():
     sql = 'select * from playbook where name like %s limit %s,%s'
     params = (search, (pagenow - 1) * pagesize, pagesize)
     result = tool_db.selectByParameters(sql, params=params)
-    return json.dumps(result)
+    countsql = 'select count(1) as allcount from playbook where name like %s'
+    allcount = tool_db.selectByParameters(countsql, params=(search,))[0]['allcount']
+    return json.dumps( {"result": result, "allcount": allcount} )
 
 
 def shellRun(command):
