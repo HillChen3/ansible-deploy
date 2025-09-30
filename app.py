@@ -3,7 +3,7 @@ from flask import request
 from flask import render_template
 from flask import redirect
 from flask import session
-from shijiange import shijiange
+from ansible_test import ansible_test
 from views import views
 from servers import servers
 from auth import auth
@@ -14,7 +14,7 @@ import datetime
 app = Flask(__name__)
 app.config['SECRET_KEY']='mypwd'
 app.permanent_session_lifetime = datetime.timedelta(minutes=1440)
-app.register_blueprint(shijiange, url_prefix="/shijiange")
+app.register_blueprint(ansible_test, url_prefix="/ansible_test")
 app.register_blueprint(views, url_prefix="/views")
 app.register_blueprint(servers, url_prefix="/servers")
 app.register_blueprint(auth, url_prefix="/auth")

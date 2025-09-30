@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% block head %}
-    <title>实践哥测试</title>
+    <title>ansible部署系统</title>
     <script type="text/javascript">
         $(document).ready(function () {
             $("#ajaxtest").click(function () {
                 $.ajax({
-                    url: '/shijiange/ajaxtest',
+                    url: '/ansible_test/ajaxtest',
                     type: 'get',
                     cache: false,
                     success: function (data) {
@@ -18,7 +18,7 @@
                 server_name = $("#server_name").val();
                 server_ip = $("#server_ip").val();
                 $.ajax({
-                    url: '/shijiange/ajaxget',
+                    url: '/ansible_test/ajaxget',
                     type: 'get',
                     cache: false,
                     data: {
@@ -36,7 +36,7 @@
                 password = $("#password").val();
                 info = {"username": username, "password": password};
                 $.ajax({
-                    url: '/shijiange/ajaxpost',
+                    url: '/ansible_test/ajaxpost',
                     type: 'post',
                     cache: false,
                     data: JSON.stringify(info),
