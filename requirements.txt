@@ -1,3 +1,8 @@
-flask
+setuptools_rust
 ansible
-pymysql
+Flask
+PyMySQL
+PyYAML
+xlrd
+xlwt
+uWSGI
