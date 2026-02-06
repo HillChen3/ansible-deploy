@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页 - 我的网站</title>
+    <!-- 引入Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">我的网站</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">产品介绍</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">服务支持</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">关于我们</a>
+                    </li>
+                </ul>
+                <a href="/templates/login.html" class="btn btn-outline-light">登录</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 轮播图 Banner -->
+    <div id="mainCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://via.placeholder.com/1600x600/4A90E2/FFFFFF?text=欢迎来到我们的网站" class="d-block w-100" alt="Banner 1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>第一张轮播图标题</h5>
+                    <p>这里是第一张轮播图的简要说明文本。</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/1600x600/50E3C2/FFFFFF?text=发现精彩内容" class="d-block w-100" alt="Banner 2">
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/1600x600/E35050/FFFFFF?text=全新体验即将开始" class="d-block w-100" alt="Banner 3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- 主内容区 -->
+    <main class="container mb-5">
+        <h2 class="text-center mb-4">功能菜单</h2>
+        <!-- 模块化菜单网格系统 -->
+        <div class="row g-4">
+            <!-- 菜单项1 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://via.placeholder.com/300x200/4A90E2/FFFFFF?text=功能一" class="card-img-top" alt="功能一">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">功能模块一</h5>
+                        <p class="card-text flex-grow-1">这里是功能模块一的简要介绍，说明这个模块的主要内容和特点。</p>
+                        <a href="#" class="btn btn-outline-primary mt-auto">了解更多</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 菜单项2 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://via.placeholder.com/300x200/50E3C2/FFFFFF?text=功能二" class="card-img-top" alt="功能二">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">功能模块二</h5>
+                        <p class="card-text flex-grow-1">功能模块二的描述信息，展示这个模块的核心功能和价值。</p>
+                        <a href="#" class="btn btn-outline-primary mt-auto">了解更多</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 菜单项3 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://placeholder.com/300x200/E35050/FFFFFF?text=功能三" class="card-img-top" alt="功能三">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">功能模块三</h5>
+                        <p class="card-text flex-grow-1">对功能模块三进行详细说明，介绍其特色服务和使用方式。</p>
+                        <a href="#" class="btn btn-outline-primary mt-auto">了解更多</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 菜单项4 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://via.placeholder.com/300x200/9013FE/FFFFFF?text=功能四" class="card-img-top" alt="功能四">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">功能模块四</h5>
+                        <p class="card-text flex-grow-1">功能模块四的详细介绍内容，让用户了解这个模块的用途。</p>
+                        <a href="#" class="btn btn-outline-primary mt-auto">了解更多</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>关于我们</h5>
+                    <p>我们是一家致力于提供优质服务的公司，专注于前端技术和用户体验设计。</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>快速链接</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light">首页</a></li>
+                        <li><a href="#" class="text-light">产品介绍</a></li>
+                        <li><a href="#" class="text-light">服务支持</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>联系我们</h5>
+                    <ul class="list-unstyled">
+                        <li>电话：0123-456789</li>
+                        <li>邮箱：info@example.com</li>
+                        <li>地址：某某市某某区</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center mb-0">&copy; 2025 我的网站. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <!-- 引入Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
